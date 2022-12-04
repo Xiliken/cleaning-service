@@ -1,0 +1,201 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 30px;
+  right: 0;
+  z-index: 10;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 30px;
+    text-transform: uppercase;
+    line-height: 17px;
+    font-size: 15px;
+    @extend %ubuntu-medium;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__social-list {
+
+  }
+
+  &__social-item {
+    display: inline-block;
+    margin: 0 15px;
+    max-width: 32px;
+    max-height: 32px;
+
+    img {
+      max-width: 32px;
+      max-height: 32px;
+    }
+  }
+
+  &__btn {
+    color: #fff;
+    background-color: transparent;
+    padding: 6px 28px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    margin-right: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover {
+      color: #000;
+      background: #fff;
+    }
+
+    &.header__btn--whatsapp {
+      border:  1px solid greenyellow;
+
+      &:hover {
+        background: greenyellow;
+      }
+    }
+  }
+
+  &__icon {
+    padding: 6px 28px;
+
+    img {
+      max-width: 36px;
+      max-height: 36px;
+    }
+  }
+
+  &__phone {
+    font-size: 16px;
+    line-height: 18px;
+    @extend %ubuntu-bold;
+  }
+}
+
+
+.menu {
+  &__list-item {
+    display: inline-block;
+
+    & + .menu__list-item {
+      padding-left: 20px;
+      padding-top: 20px;
+    }
+  }
+
+  &__btn {
+    display: none;
+  }
+
+  &__list-phone {
+    display: none;
+  }
+}
+
+
+.top {
+    background-image: url('../img/promo.jpg');
+
+    &::before {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      //background: radial-gradient(45.97% 54.43% at 50% 45.57%, rgba(23,26,28,0) 50.28%, rgba(23,26,28,0) 50.28%, rgba(23,26,28,0.00225974) 50.29%, rgba(4,5,5,0.820343) 58.72%, rgba(5,5,6, 0.792703) 80.08%, #000 87.89%);
+      //opacity: 0.17;
+    }
+
+
+    &__wrapper {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    &__title {
+      font-size: 96px;
+      line-height: 1.5;
+      @extend %sf-semibold;
+      margin-bottom: 25px;
+      background: linear-gradient(135deg, #00d2ff, #00C7CC);
+      background-clip: text;
+      color: transparent;
+    }
+
+    &__text {
+      margin: 25px 0 35px;
+      max-width: 400px;
+      font-size: 22px;
+      color: #fff;
+    }
+
+    &__social-item {
+      display: inline-block;
+      margin: 0 25px;
+    }
+
+    &__social-link {
+      opacity: 0.7;
+      transition: all .3s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &__preview {
+      display: block;
+      margin-top: 100px;
+    }
+}
+
+
+// Spin animation
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.stroke-solid {
+  stroke-dashoffset: 0;
+  stroke-dashArray: 300;
+  stroke-width: 4px;
+  transition: stroke-dashoffset 1s ease,
+  opacity 1s ease;
+}
+
+.icon {
+  transform: scale(.8);
+  transform-origin: 50% 50%;
+  transition: transform 200ms ease-out;
+}
+
+// Hover
+#play:hover {
+  .stroke-solid {
+    opacity: 1;
+    stroke-dashoffset: 300;
+  }
+  .icon {
+    transform: scale(.9);
+  }
+}
+
+
+#play {
+  cursor: pointer;
+}

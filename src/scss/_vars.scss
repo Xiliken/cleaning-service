@@ -1,0 +1,63 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+
+// Colors
+$link-color: #3636;
+$light-color: #fff;
+$accent-color: #458FF6;
+$secondary-color: #3591D0;
+$dark-secondary-color: #125988;
+$dark-color: #000;
+$text-color: rgba(20, 16, 36, .7);
+$warning-color: #F96509;
+$danger-color: #F92D22;
+
+
+
+$font-family: "Roboto Mono", sans-serif;
+$content-width: 1160px;
+$content-fluid-width: 1790px;
+$container-offset: 15px;
+$container-width: calc($content-width  + ($container-offset * 2));
+$container-fluid-width: calc($content-fluid-width + ($container-offset * 2));
+
+
+%sf-regular {
+  font-family: 'SFProDisplay-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%sf-semibold {
+  font-family: 'SFProDisplay-SemiBold', sans-serif;
+  font-weight: 600;
+}
+
+%sf-bold {
+  font-family: 'SFProDisplay-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%ubuntu-light {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+
+%ubuntu-regular {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+}
+
+%ubuntu-medium {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+
+
+%ubuntu-bold {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+}
+
+
+
+

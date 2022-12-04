@@ -1,0 +1,45 @@
+.tabs {
+
+  &__menu {
+    padding-bottom: 20px;
+    border-radius: 15px;
+    //border-bottom: 3px solid #fff;
+    background: linear-gradient(135deg, #00d2ff, #00C7CC);
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 100%;
+    padding-top: 20px;
+    flex-wrap: wrap;
+
+    &-btn {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.6;
+      outline: none;
+      background-color: transparent;
+      border: none;
+      color: #fff;
+
+      &:focus {
+        background-color: transparent;
+        border: 1px solid #fff;
+        padding: 10px;
+      }
+
+      &--active {
+        background-color: transparent;
+        border: 1px solid #fff;
+        padding: 10px;
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 40px;
+  }
+}
